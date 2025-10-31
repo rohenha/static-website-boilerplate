@@ -1,0 +1,5 @@
+.env
+node_modules/
+.eleventy/
+_site/
+stats.html
