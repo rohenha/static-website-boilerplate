@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "jsx-async-runtime",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "paths": {
+      "@components/*": ["./src/_components/*"],
+      "@layouts/*": ["./src/_layouts/*"],
+      "@data/*": ["./src/_data/*"],
+      "@scripts/*": ["./assets/scripts/*"],
+			"*": ["./types/*.d.ts"]
+    },
+    "skipLibCheck": true,
+    "target": "ESNext"
+  },
+  "include": ["src", "assets", "types", "src/types"],
+  "exclude": ["node_modules", "_site"]
+}

@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+	/* Configuration des breakpoints pour le container */
+	--breakpoint-sm: 40rem;
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 64rem;
+	--breakpoint-xl: 80rem;
+	--breakpoint-2xl: 96rem;
+
+	/* Espacement personnalisé */
+	--spacing-tiny: 0.5rem;
+	--spacing-xsm: 1rem;
+	--spacing-sm: 1.5rem;
+	--spacing-smd: 2rem;
+	--spacing-md: 3rem;
+	--spacing-lg: 4.5rem;
+	--spacing-xlg: 6rem;
+	--spacing-giant: 9rem;
+
+	/* Flex basis personnalisé */
+	--flex-basis-1\/16: 6.25%;
+	--flex-basis-2\/16: 12.5%;
+	--flex-basis-3\/16: 18.75%;
+	--flex-basis-4\/16: 25%;
+	--flex-basis-5\/16: 31.25%;
+	--flex-basis-6\/16: 37.5%;
+	--flex-basis-7\/16: 43.75%;
+	--flex-basis-8\/16: 50%;
+	--flex-basis-9\/16: 56.25%;
+	--flex-basis-10\/16: 62.5%;
+	--flex-basis-11\/16: 68.75%;
+	--flex-basis-12\/16: 75%;
+	--flex-basis-13\/16: 81.25%;
+	--flex-basis-14\/16: 87.5%;
+	--flex-basis-15\/16: 93.75%;
+	--flex-basis-16\/16: 100%;
+
+	/* Grid template columns étendues */
+	--grid-template-columns-13: repeat(13, minmax(0, 1fr));
+	--grid-template-columns-14: repeat(14, minmax(0, 1fr));
+	--grid-template-columns-15: repeat(15, minmax(0, 1fr));
+	--grid-template-columns-16: repeat(16, minmax(0, 1fr));
+
+	/* Grid column spans */
+	--grid-column-span-13: span 13 / span 13;
+	--grid-column-span-14: span 14 / span 14;
+	--grid-column-span-15: span 15 / span 15;
+	--grid-column-span-16: span 16 / span 16;
+
+	/* Grid column start/end */
+	--grid-column-start-13: 13;
+	--grid-column-start-14: 14;
+	--grid-column-start-15: 15;
+	--grid-column-start-16: 16;
+	--grid-column-start-17: 17;
+
+	--grid-column-end-13: 13;
+	--grid-column-end-14: 14;
+	--grid-column-end-15: 15;
+	--grid-column-end-16: 16;
+	--grid-column-end-17: 17;
+}
+
+/* Fix pour .container en mode dev - Force la génération des media queries */
+@layer utilities {
+	.container {
+		width: 100%;
+
+		@media (min-width: 40rem) {
+			max-width: 40rem;
+		}
+
+		@media (min-width: 48rem) {
+			max-width: 48rem;
+		}
+
+		@media (min-width: 64rem) {
+			max-width: 64rem;
+		}
+
+		@media (min-width: 80rem) {
+			max-width: 80rem;
+		}
+
+		@media (min-width: 96rem) {
+			max-width: 96rem;
+		}
+	}
+}
