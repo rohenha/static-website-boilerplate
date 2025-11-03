@@ -5,9 +5,8 @@ import { defineConfig } from "vite"
 import path from "path"
 
 // Plugins
-import vitePluginEleventy from './plugins/vite-plugin-eleventy/index.ts'
-import htmlPerfPlugin from "./plugins/html-perf/index.ts"
-import criticalCssPlugin from "./plugins/critical-css/index.ts"
+import vitePluginEleventy from "@rohenha/vite-plugin-eleventy"
+import criticalCssPlugin from "@rohenha/vite-plugin-critical-css"
 import tailwindcss from '@tailwindcss/vite'
 import { visualizer } from 'rollup-plugin-visualizer'
 import sassGlobImports from 'vite-plugin-sass-glob-import'
@@ -44,9 +43,7 @@ export default ({ mode }) => {
 				outputDir: projectConfig.buildDir,
 				timeout: 30000
 			}),
-			htmlPerfPlugin(),
 			vitePluginEleventy({
-				isProd: isProd,
 				outputDir: projectConfig.buildDir,
 				eleventyDir: projectConfig.eleventyDir,
 				srcDir: projectConfig.srcDir,

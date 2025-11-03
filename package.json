@@ -38,6 +38,8 @@
   "homepage": "https://github.com/rohenha/static-website-boilerplate#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@rohenha/vite-plugin-critical-css": "^1.0.1",
+    "@rohenha/vite-plugin-eleventy": "^1.0.0",
     "@tailwindcss/postcss": "^4.1.16",
     "@tailwindcss/vite": "^4.1.16",
     "@types/node": "^24.9.1",
